@@ -1,6 +1,6 @@
 # Proyecto 1 - (Criptosistema de Vigenère y Hill)
 
-[![Python](https://img.shields.io/badge/Python-3.9+-yellow?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://python.org) ![Status badge](https://img.shields.io/badge/status-en%20progreso-yellow?style=for-the-badge)
+[![Python](https://img.shields.io/badge/Python-3.9+-yellow?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://python.org)  ![Status badge](https://img.shields.io/badge/status-%20terminado-green?style=for-the-badge)
 
 ## Criptografía y Seguridad, Universidad Nacional Autónoma de México semestre 2023-1
 
@@ -36,13 +36,10 @@ python3 -m pip install -r requirements.txt
 
 ## Ejecutar scripts 🚀
 
-*Los siguientes comandos ejecutaran el programa dependiendo el tipo de cifrafo pueden ser ejecutados con **python3**.*
+*Los siguientes comandos ejecutaran el programa dependiendo el tipo de cifrado pueden ser ejecutados con **python3**.*
 
-Abrir en su editor de texto favorito y ejetucar desde ahi o ejecutar en la terminal los siguientes comandos al estar en la ruta y ejecutar.
-
-*Criptografia-y-Seguridad/Proyectos/Proyecto 1/src*.
-
-Tambien recomendamos usar el editor de texto
+Abrir la terminal pararse sobre la suguiente ruta *Criptografia-y-Seguridad/Proyectos/Proyecto 1/src*.
+Y ejecutar el siguiente comando:
 
 ```bash
 python3 nombre_del_script.py
@@ -73,13 +70,14 @@ python3 hill.py
 python3 cifradoVigenere.py
 ```
 
-
+**Resultado en consola:**
+![Descifrado Vigenere](https://user-images.githubusercontent.com/41756950/191097329-4afb671e-0bf1-47f1-a94c-caeee4ac1470.png)
 
 ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢
 * Invita una cerveza 🍺 o un café ☕ a alguien del equipo.
-* 10/10 en la tarea 1 🤓
+* 10/10 en el proyecto 1 🤓
 
 ---
 ⌨️ con ❤️ por  [VictorDeGallegos](https://github.com/VictorDeGallegos), [demian35](https://github.com/demian35) y [CarlosCruzRangel](https://github.com/CarlosCruzRangel)
