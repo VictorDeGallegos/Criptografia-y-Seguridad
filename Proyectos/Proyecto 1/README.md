@@ -68,6 +68,18 @@ python3 hill.py
 **Resultado en consola:**
 ![Descifrado Hill](https://user-images.githubusercontent.com/41756950/191059484-66afc726-8c97-4fbf-be70-a2b0d4b8462f.png)
 
+### Cifrado de vigenere
+```python
+python3 cifradoVigenere.py
+```
+
+### Desifrado de Vigenere
+```python
+python3 Vigeneredesifrado.py
+```
+
+
+
 ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢
