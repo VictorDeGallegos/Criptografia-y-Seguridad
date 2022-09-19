@@ -1,3 +1,10 @@
+# Tarea 1
+# Desifrado de frecuencias
+# Integrantes de Equipo:
+# Jose Demian Jimenez Salgado
+# Carlos Cruz Rangel
+# Victor Hugo Gallegos Mota
+
 from pathlib import Path
 
 
