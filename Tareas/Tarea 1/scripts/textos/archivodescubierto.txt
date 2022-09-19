@@ -1,0 +1,35 @@
+la proteina spike del sarscovdos se esta adaptando debido a
+presiones selectivas
+la escala global de la pandemia de covid ha demostrado la evolucion
+del sarscovdos y las claves de adaptacion. despues de catorce
+meses desde la declaracion de la pandemis, multiples variantes
+han surgido y se han fijado en la poblacion humana gracias
+a extrinsecas presiones selectivas si no tambien a la capac-
+idad mutacional inhernete del virus. aqui aplicamos una prueba
+de evolucion de sustitucion neutra a la proteina de pico de
+la proteina omicron y se comparo a la evolucion neutra de la
+variente de preocupacion de los demas. realizamos comparaciones
+entre las interacciones entre las proteinas s de los cov(alfa,eta,gamma,delta
+y omicron) y el receptor acedos. los aminoacidos compartido
+entre todas las proteinas s que se unen a acedos permanecen
+constantes lo que indica que estos aminoacidos son esenc-
+iales para la union precisa al receptor. los complejos rbd para
+cada variate con el receptor se utilizaron par identificar los
+aminoacidos involucrados en la interaccion proteina prote-
+ina. la rbd de omicron establece ochenta y dos contactos frente
+a los sesentaycuatro de la proteina original de wuhan por lo
+tanto, el numero medio de contactos por residuos es mayor
+por lo que el contacto termodinamico es mas estable. los rbd de
+los cov son similares en secuencia y estructura sin embargo,
+el rbd de omicron presenta la desviacion mas grande de la est-
+ructura por uno punto once armsd, causado por un conjunto
+de mutaciones cercanas a la glicosilacion ntresitneo cuarenta
+y tres de la proteina omicron s son diferente de la proteina
+original que provocan un reconocimiento reducido por parte
+de los anticuerpos neutralizantes. nuestros resultados su-
+guieren que las presiones selectivas son inducidas por la
+vacunacion masiva en todo el mundo y por persistencia de in-
+feccioes recurrentes en individuos inmunodeprimidos, que
+no eliminaron la infeccion y acabaron facilitando la seleccion
+de virus cuyas caracteristicas son diferentes a los cov an-
+teriores, menos patogenos pero con mayor tranmisibilidad
