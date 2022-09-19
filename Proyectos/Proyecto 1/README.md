@@ -73,11 +73,6 @@ python3 hill.py
 python3 cifradoVigenere.py
 ```
 
-### Desifrado de Vigenere
-```python
-python3 Vigeneredesifrado.py
-```
-
 
 
 ## Expresiones de Gratitud 🎁
