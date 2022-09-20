@@ -1,6 +1,6 @@
 # Tarea 1 - Cifrados Clásicos.
 
-[![Python](https://img.shields.io/badge/Python-3.9+-yellow?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://python.org) ![Status badge](https://img.shields.io/badge/status-en%20progreso-yellow?style=for-the-badge)
+[![Python](https://img.shields.io/badge/Python-3.9+-yellow?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://python.org) ![Status badge](https://img.shields.io/badge/status-%20terminado-green?style=for-the-badge)
 
 ## Criptografía y Seguridad, Universidad Nacional Autónoma de México semestre 2023-1
 
