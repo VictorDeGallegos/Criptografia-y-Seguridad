@@ -26,14 +26,6 @@ python3 -V
 Python 3.10.6
 ```
 
-* Librerias **necesarias** `sympy` `numpy`
-Estar en la ruta *Criptografia-y-Seguridad/Proyectos/Proyecto 1/* y ejecutar el siguiente comando:
-
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-
 ## Ejecutar scripts 🚀
 
 *Los siguientes comandos ejecutaran el programa dependiendo el tipo de cifrado pueden ser ejecutados con **python3**.*
@@ -47,23 +39,55 @@ python3 nombre_del_script.py
 
 Tambien recomendamos usar el editor de texto [Visual Studio Code](https://code.visualstudio.com/) con la extension [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) para poder ejecutar los scripts.
 
-### Cifrado Hill
+### Cifrado Hill (SCRIPT SIN LIBRERIAS)
+
+Realizamos 2 scripts para el cifrado Hill, uno con librerias y otro sin librerias.
+
+```python
+python3 HillSinLibrerias.py
+```
+
+**Resultado en consola:**
+
+En este script se define la matriz de cifrado y su version en string para poder cifrar y descifrar textos planos
+
+<img width="1027" alt="Cifrado Hill sin librerias" src="https://user-images.githubusercontent.com/41756950/191543066-2f95b6b5-6944-431b-bc83-ec069ee0fbe8.png">
+
+
+### Descifrado Hill (Con librerias)
+
+Este script se realizo para corroborar que el cifrado Hill sin librerias funciona correctamente.
+
+
+* Librerias **necesarias** `sympy` `numpy`
+Estar en la ruta *Criptografia-y-Seguridad/Proyectos/Proyecto 1/* y ejecutar el siguiente comando:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+Posteriormente ejecutar el siguiente comando:
 
 ```python
 python3 hill.py
 ```
 
 **Resultado en consola:**
-![Cifrado Hill](https://user-images.githubusercontent.com/41756950/191059157-ce5972b4-1afd-4ce2-95de-3f14299677d6.png)
+Como se ouede notar en la imagen el resultado del cifrado Hill es el mismo que el cifrado Hill sin librerias.
 
-### Descifrado Hill
+<img width="1027" alt="Cifrado Hill con librerias" src="https://user-images.githubusercontent.com/41756950/191541043-6997e754-75b6-4a41-8ef4-6ef2702fafb3.png">
+
+
+### Descifrado Hill (Con librerias)
 
 ```python
-python3 hill.py
+python3 Hill.py
 ```
 
 **Resultado en consola:**
-![Descifrado Hill](https://user-images.githubusercontent.com/41756950/191059484-66afc726-8c97-4fbf-be70-a2b0d4b8462f.png)
+Como se puede notar en la imagen el resultado del descifrado Hill es el mismo que el descifrado Hill sin librerias.
+<img width="1027" alt="Captura de Pantalla 2022-09-21 a la(s) 10 08 57 a m" src="https://user-images.githubusercontent.com/41756950/191541541-be169c47-610e-451c-9082-5b4ff43f16c6.png">
+
 
 ### Cifrado de vigenere
 ```python
@@ -71,7 +95,18 @@ python3 cifradoVigenere.py
 ```
 
 **Resultado en consola:**
-![Descifrado Vigenere](https://user-images.githubusercontent.com/41756950/191097329-4afb671e-0bf1-47f1-a94c-caeee4ac1470.png)
+
+<img width="1027" alt="Captura de Pantalla 2022-09-21 a la(s) 10 10 53 a m" src="https://user-images.githubusercontent.com/41756950/191542037-4967e7b5-4592-496c-9ca4-bec4632ff176.png">
+
+### Descifrado de vigenere
+
+```python
+python3 descifradoVigenere.py
+```
+
+**Resultado en consola:**
+
+<img width="1027" alt="Captura de Pantalla 2022-09-21 a la(s) 10 12 28 a m" src="https://user-images.githubusercontent.com/41756950/191542424-7962cc53-6ecc-46c4-84f6-b43ad336ad78.png">
 
 ## Expresiones de Gratitud 🎁
 

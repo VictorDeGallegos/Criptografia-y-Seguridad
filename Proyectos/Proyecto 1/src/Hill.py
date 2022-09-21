@@ -225,9 +225,13 @@ def run():
             " ", "")
         # preguntar tamaño de la clave
         tam_clave = int(input("Introduzca el tamaño de la clave: "))
-        print('Generando clave aleatoria...')
         # Generar clave
         key = uoc_hill_genkey(tam_clave)
+        # introducir valores a la clave
+        print("Introduzca los valores de la clave: ")
+        for i in range(0, tam_clave):
+            for j in range(0, tam_clave):
+                key[i][j] = int(input())
         print("La clave es: \n", key)
         ciphertext = uoc_hill_cipher(message, key)
         print("El mensaje encriptado es:", ciphertext)
