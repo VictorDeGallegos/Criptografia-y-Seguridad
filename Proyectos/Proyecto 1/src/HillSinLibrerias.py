@@ -152,7 +152,7 @@ def main():  # Función principal
     matrix = [[1, 2], [3, 4]]
     key = 'BCDE'
     # mensaje
-    message = "NIÑA"
+    message = input("Ingrese el mensaje : ")
     # Encriptar
     encrypted = encrypt(matrix, message, alphabet)
     encrypted_with_key = encrypt_with_key(
