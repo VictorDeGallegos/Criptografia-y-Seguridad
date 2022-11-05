@@ -1,3 +1,8 @@
+# ---Desarrolladores---
+# Victor Hugo Gallegos Mota
+# José Demian Jiménez
+# Carlos Cruz Rangel
+
 # Script para encontrar 2 numeros que multiplciados me den un numero n
 
 def multiplicacion():
