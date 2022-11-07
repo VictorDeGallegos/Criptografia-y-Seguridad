@@ -1,8 +1,10 @@
-# Hecho por Javatar
+# ---Desarrolladores---
+# Victor Hugo Gallegos Mota
+# José Demian Jiménez
+# Carlos Cruz Rangel
+
 import random
 import math
-# importar sys.maxsize
-from sys import maxsize
 
 
 class RSA:
@@ -13,30 +15,30 @@ class RSA:
         # Dos números primos aleatorios
         self.p = self.get_probable_prime()
         self.q = self.get_probable_prime()
-        # $n = p*q$
+        # n = p*q
         self.n = self.p * self.q
-        # Cota superior para elegir `e`
+        # Cota superior de e
         self.phi = (self.p - 1) * (self.q - 1)
 
         self.e_aux = self.get_probable_prime()
-        # $e$ tal que $gcd(e,\phi(n)) = 1$
+        # e tal que 1 < e < phi(n) y mcd(e, phi(n)) = 1
         self.e = self.get_e()
-        # Satisface la congruencia $de \cog \mod{\phi(n)}$
+        # Satisface la congruencia de \cog \mod{\phi(n)}
         self.d = self.get_d()
 
-    def get_probable_prime(self):
+    def get_probable_prime(self):  # Genera un número primo aleatorio
         return random.getrandbits(self.bit_length)
 
-    def get_e(self):
+    def get_e(self):    # Calcula el valor de e
         while math.gcd(self.phi, self.e_aux) > 1:
             self.e_aux += 1
 
         return self.e_aux
 
-    def get_d(self):
+    def get_d(self):   # Calcula el valor de d
         return pow(self.e, -1, self.phi)
 
-    def encrypt(self, msg):
+    def encrypt(self, msg):  # Cifra el mensaje
         length = len(msg)
         arr_r = []
 
@@ -45,7 +47,7 @@ class RSA:
 
         return arr_r
 
-    def decrypt(self, m):
+    def decrypt(self, m):  # Descifra el mensaje
         length = len(m)
         arr_r = []
 
@@ -55,7 +57,7 @@ class RSA:
         return ''.join(arr_r)
 
 
-def main():
+def main():  # Función principal
     # Creación de la instancia del cifrado RSA
     # 512 bits de longitud para que los primos sean de al menos 100 dígitos
     rsa = RSA(512)  # bajar a 10 para probar
