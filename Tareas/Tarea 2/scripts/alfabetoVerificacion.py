@@ -4,7 +4,7 @@
 # Carlos Cruz Rangel
 
 # ---Fecha de creación---
-# 05/11/2021
+# 07/11/2021
 
 import math
 
@@ -257,8 +257,21 @@ if __name__ == '__main__':
     print('Llave pública:', public)
     print('Llave privada:', private, end='\n\n')
 
-    # CIFRAMOS CADA LETRA DEL ALFABETO
-    print('Cifrado de cada letra del alfabeto')
-    alfabeto = 'abcdefghijklmnopqrstuvwxyz'
-    for letra in alfabeto:
-        print(letra, encrypt(public, letra))
+    # obtenemos su valor unicode
+    message = input('Ingrese el mensaje a encriptar: ')
+    print('Mensaje a encriptar:', message, end='\n\n')
+
+    # Encriptamos el mensaje
+    encrypted_msg = encrypt(public, message)
+    print('Mensaje encriptado:', ''.join(
+        map(lambda x: str(x), encrypted_msg)), end='\n\n')
+
+    # Desencriptamos el mensaje
+    print('Desencriptando mensaje con llave privada', private, ' . . .')
+    print('Mensaje desencriptado:', decrypt(
+        private, encrypted_msg), end='\n\n')
+
+    # Probamos el cifrado y descifrado
+    assert decrypt(private, encrypt(public, message)) == message
+
+    print('El cifrado y descifrado funcionó correctamente!')
