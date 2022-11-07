@@ -1,12 +1,44 @@
-import math
-
 # ---Desarrolladores---
 # Victor Hugo Gallegos Mota
 # José Demian Jiménez
 # Carlos Cruz Rangel
 
+# ---Fecha de creación---
+# 05/11/2021
 
-def is_prime(n):
+import math
+
+# Variables globales para el programa
+p = 0
+q = 0
+
+
+def get_p_q():  # Función para obtener los valores de p y q
+    """
+    Función para obtener los valores de p y q
+    return: Tupla con los valores de p y q
+    rtype: tuple
+    """
+    n = 7784099  # Valor de n, cambiarlo si se desea
+    x = 2
+
+    while n != 1:  # Mientras n sea diferente de 1
+        if n % x == 0:  # Si el residuo de n entre x es 0
+            # Asignar a p a variable global p
+            global p
+            p = x
+            # Asignar a q a variable global q
+            global q
+            q = n // x
+            break
+        x += 1
+
+    print("p = ", p)
+    # imprimir tipo de dato para p
+    print("q = ", q, end="\n\n")
+
+
+def is_prime(n):  # Verifica si un número es primo
     """
     Verifica si un número es primo.
 
@@ -31,7 +63,7 @@ def is_prime(n):
     return True
 
 
-def gcd(a, b):
+def mcd(a, b):  # Calcula el máximo común divisor
     """
     Calcula el Máximo Común Divisor de dos números.
 
@@ -45,10 +77,10 @@ def gcd(a, b):
     if b == 0:
         return a
     else:
-        return gcd(b, a % b)
+        return mcd(b, a % b)
 
 
-def mod_inverse(a, m):
+def mod_inverse(a, m):  # Calcula el inverso modular
     """
     Calcula el módulo inverso de un número.
 
@@ -68,7 +100,7 @@ def mod_inverse(a, m):
     return 1
 
 
-def generate_keypair(p, q):
+def generate_keypair(p, q):  # Genera una llave pública y privada
     """
     Genera las llaves pública y privada.
 
@@ -92,14 +124,14 @@ def generate_keypair(p, q):
     phi = (p - 1) * (q - 1)
 
     # Elegir un número entero e tal que e y phi(n) sean primos entre sí.
-    e = 11
+    e = 37
 
     # Utilizar el algoritmo de Euclides para verificar que e y phi(n) son primos entre sí.
-    g = gcd(e, phi)
+    g = mcd(e, phi)
 
     while g != 1:
-        e = 7
-        g = gcd(e, phi)
+        e = 37
+        g = mcd(e, phi)
 
     # Utilizar el algoritmo extendido de Euclides para generar la llave privada.
     d = mod_inverse(e, phi)
@@ -108,7 +140,34 @@ def generate_keypair(p, q):
     return ((e, n), (d, n))
 
 
-def encrypt(pk, plaintext):
+def calculae(phi):  # Calcula el valor de e
+    """
+    Calcula el valor de e.
+
+    :param phi: Valor de phi
+    :type phi: int
+    :return: Valor de e
+    :rtype: int
+    """
+
+    e = 2
+    le = []
+    while e > 1 and e < phi:
+        if mcd(e, phi) == 1:
+            le.append(e)
+            e = e+1
+        else:
+            e = e+1
+    # print("\nVALORES PARA (e)="+str(le))
+    e = 7
+    print("(e)="+str(e), end="\n\n")
+    while mcd(e, phi) != 1:
+        print("\n\tEliga un valor valido !!!")
+        e = int(input("(e)="), end="\n\n")
+    return e
+
+
+def encrypt(pk, plaintext):  # Encripta un mensaje
     """
     Encripta un mensaje.
 
@@ -129,7 +188,7 @@ def encrypt(pk, plaintext):
     return cipher
 
 
-def decrypt(pk, ciphertext):
+def decrypt(pk, ciphertext):  # Desencripta un mensaje
     """
     Desencripta un mensaje.
 
@@ -151,14 +210,47 @@ def decrypt(pk, ciphertext):
 
 
 if __name__ == '__main__':
+
     # Ejemplo de ejecución
-    print('RSA Encrypter/ Decrypter')
-    q = 2791
-    p = 2789
-    print('Generando tu llave pública/privada ahora . . .')
+    print('RSA Cifrado/ Descifrado', end='\n\n')
+    # ELEGIMOS VALORES DE NUMEROS PRIMOS PARA (p) y (q)
+    print('ELEGIMOS VALORES DE NUMEROS PRIMOS PARA (p) y (q) ')
+    get_p_q()
+
+    # CALCULAMOS EL VALOR DE (n) o llave pública
+    print('CALCULAMOS EL VALOR DE (n)')
+    print("(n)=(p)*(q)")
+    n = p * q
+    print("(n)=("+str(p)+")*("+str(q)+")")
+    print('(n):', n, end='\n\n')
+
+    # CALCULAMOS EL VALOR DE (phi) o llave privada
+    print('CALCULAMOS EL VALOR DE (phi)')
+    print("(phi)=(p-1)*(q-1)")
+    phi = (p - 1) * (q - 1)
+    print("(phi)=("+str(p)+"-1)*("+str(q)+"-1)")
+    print('(phi):', phi, end='\n\n')
+
+    # ELEGIMOS UN VALOR DE (e) PARA LA LLAVE PUBLICA
+    print('ELEGIMOS UN VALOR DE (e) PARA LA LLAVE PUBLICA')
+    print("(e)/  1<e<phi and mcd(e,phi)==1")
+    e = calculae(phi)
+
+    # CALCULAMOS EL VALOR DE (d) PARA LA LLAVE PRIVADA
+    print('CALCULAMOS EL VALOR DE (d) PARA LA LLAVE PRIVADA')
+    print("(d)=e^-1 mod phi")
+    d = mod_inverse(e, phi)
+    print("(d)=("+str(e)+")^-1 mod ("+str(phi)+")")
+    print('(d):', d, end='\n\n')
+
+    # CALCULAMOS LLA LLAVE PUBLICA Y PRIVADA
+    print('Generando la llave pública y privada . . .')
     public, private = generate_keypair(p, q)
-    print('Tu llave pública es ', public, ' y tu llave privada es ', private)
-    # obtener cifrado de cada letra del alfabeto
+    print('Llave pública:', public)
+    print('Llave privada:', private, end='\n\n')
+
+    # CIFRAMOS CADA LETRA DEL ALFABETO
+    print('Cifrado de cada letra del alfabeto')
     alfabeto = 'abcdefghijklmnopqrstuvwxyz'
     for letra in alfabeto:
         print(letra, encrypt(public, letra))
