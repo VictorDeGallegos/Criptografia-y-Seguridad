@@ -13,29 +13,36 @@ p = 0
 q = 0
 
 
-def get_p_q():  # Función para obtener los valores de p y q
+def pollard():
     """
-    Función para obtener los valores de p y q
+    Algoritmo de Pollard para factorizar números grandes.
     return: Tupla con los valores de p y q
     rtype: tuple
     """
     n = 7784099  # Valor de n, cambiarlo si se desea
-    x = 2
+    x = 2  # Valor inicial de x
+    y = 2  # Valor inicial de y
+    d = 1  # Valor inicial de d
+    iteraciones = 0
+    while d == 1:
+        x = (x**2 + 1) % n  # f(x) = x^2 + 1
+        y = (y**2 + 1) % n  # f(y) = y^2 + 1
+        y = (y**2 + 1) % n  # f(y) = y^2 + 1
+        d = mcd(abs(x-y), n)  # d = mcd(|x-y|, n)
+        iteraciones += 1
+        print("Iteraciones realizadas:", iteraciones, d)
 
-    while n != 1:  # Mientras n sea diferente de 1
-        if n % x == 0:  # Si el residuo de n entre x es 0
-            # Asignar a p a variable global p
-            global p
-            p = x
-            # Asignar a q a variable global q
-            global q
-            q = n // x
-            break
-        x += 1
+    # Agregar los factores a las variables globales p y q
+    global p
+    p = d
+    global q
+    q = n//d
+    # Imprimir los valores de p y q
+    print("p =", d)
+    print("q =", n//d)
 
-    print("p = ", p)
-    # imprimir tipo de dato para p
-    print("q = ", q, end="\n\n")
+    # Imprimir funcion semialeatoria del algoritmo
+    print("f(x) = x^2 + 1")
 
 
 def is_prime(n):  # Verifica si un número es primo
@@ -124,13 +131,13 @@ def generate_keypair(p, q):  # Genera una llave pública y privada
     phi = (p - 1) * (q - 1)
 
     # Elegir un número entero e tal que e y phi(n) sean primos entre sí.
-    e = 37
+    e = 47
 
     # Utilizar el algoritmo de Euclides para verificar que e y phi(n) son primos entre sí.
     g = mcd(e, phi)
 
     while g != 1:
-        e = 37
+        e = 47
         g = mcd(e, phi)
 
     # Utilizar el algoritmo extendido de Euclides para generar la llave privada.
@@ -159,7 +166,7 @@ def calculae(phi):  # Calcula el valor de e
         else:
             e = e+1
     # print("\nVALORES PARA (e)="+str(le))
-    e = 7
+    e = 47
     print("(e)="+str(e), end="\n\n")
     while mcd(e, phi) != 1:
         print("\n\tEliga un valor valido !!!")
@@ -215,7 +222,8 @@ if __name__ == '__main__':
     print('RSA Cifrado/ Descifrado', end='\n\n')
     # ELEGIMOS VALORES DE NUMEROS PRIMOS PARA (p) y (q)
     print('ELEGIMOS VALORES DE NUMEROS PRIMOS PARA (p) y (q) ')
-    get_p_q()
+    # get_p_q()
+    pollard()
 
     # CALCULAMOS EL VALOR DE (n) o llave pública
     print('CALCULAMOS EL VALOR DE (n)')
