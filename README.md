@@ -18,8 +18,10 @@ Repositorio para la materia de Criptografía y seguridad de la carrera de Cienci
 ## Entregables 📦
 * [Tareas]()
   * [Tarea 1](https://github.com/VictorDeGallegos/Criptografia-y-Seguridad/tree/main/Tareas/Tarea%201)
+  * [Tarea 2](https://github.com/VictorDeGallegos/Criptografia-y-Seguridad/tree/main/Tareas/Tarea%202/scripts)
 * [Proyectos]()
   * [Proyecto 1](https://github.com/VictorDeGallegos/Criptografia-y-Seguridad/tree/main/Proyectos/Proyecto%201)
+  * [Proyecto 2](https://github.com/VictorDeGallegos/Criptografia-y-Seguridad/tree/main/Proyectos/Proyecto%202)
 
 
 
